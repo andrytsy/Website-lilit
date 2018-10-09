@@ -1,0 +1,297 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+	<title></title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="popup_overlay" onClick="popup_out();"></div>
+	<div class="popup" id="thx">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Спасибо за оставленную заявку</div>
+		<div class="popup_h2">Наш менеджер свяжется с вами в ближайшее время</div>
+		<div class="btn" onClick="popup_out();">закрыть</div>
+	</div>
+	<div class="popup" id="callback">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Закажите звонок</div>
+		<div class="popup_h2">
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<div data-name="callback" class="button noselect btn">Заказать звонок</div>
+		</form>
+	</div>
+	<div class="popup" id="request">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Оставьте заявку</div>
+		<div class="popup_h2">
+			Оставьте заявку, и наш специалист свяжется<br>
+			с вами в ближайшее время.
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<div data-name="request" class="button noselect btn">Заказать</div>
+		</form>
+	</div>
+	<div class="popup" id="question">
+		<div class="popup_close noselect" onClick="popup_out();"><span>&nbsp;</span></div>
+		<div class="popup_h1">Задайте вопрос лилит</div>
+		<div class="popup_h2">
+			Заполните форму и получите ответ на интересующий вас<br>
+			вопрос
+		</div>
+		<form>
+			<? echo $desc_name ?>
+			<label class="name required">
+				<input type="text" name="name" placeholder="Ваше имя">
+			</label><br>
+			<? echo $desc_phone ?>
+			<? echo $phone_field ?>
+			<? echo $desc_email ?>
+			<label class="email required">
+				<input type="text" name="email" placeholder="Ваш E-mail">
+			</label><br>
+			<? echo $desc_ques ?>
+			<textarea class="ques" name="ques"></textarea><br>
+			<div data-name="question" class="button noselect btn">Задать вопрос</div>
+		</form>
+	</div>
+	<div class="c1">
+		<div class="wrapp">
+			<div class="header cl">
+				<div class="logo"></div>
+				<div class="t_phone">
+					8 499 <b>648-42-00</b><br>
+					<div class="btn" onclick="popup('callback','Заказать звонок');">Заказать звонок</div>
+				</div>
+			</div>
+			<div class="menus cl">
+				<ul class="menu">
+					<li class="active">тренинги</li><br>
+					<li>Индивидуальные консультации</li><br>
+					<li>Игра</li><br>
+					<li>Корпоративным клиентам</li><br>
+					<li>Бизнес-тренинг</li><br>
+					<li>Обо мне</li><br>
+					<li onclick="popup('question','Задать вопрос');">Задать вопрос</li>
+				</ul>
+			</div>
+			<div class="main_h1">Психолог-психотерапевт<br>
+			<span>Лилит  Сарибекян</span></div>
+		</div>
+	</div>
+	<div class="c2">
+		<div class="wrapp">
+			<div class="h1">Решить все свои вопросы</div>
+			<div class="h2">вы сможете за 1 консультацию</div>
+			<div class="h3" onclick="popup('request','Записаться на консультацию','Оставить заявку','Если вы хотите решить свою проблему за 1 сеанс с<br>опытным психологом, то оставьте свои данные, и мы<br>обязательно скоро свяжемся с вами.','Оставить заявку');">запишитесь сейчас</div>
+
+		</div>
+	</div>
+	<div class="c3">
+		<div class="wrapp">
+			<div class="review_my_work cl">
+				<div class="left">
+					<div class="title">
+						отзывы<br><b>о моей работе</b>
+					</div>
+					<div class="lilitimg"></div>
+					<div class="text">
+						Уже 7 лет<br>
+						я <b>п</b>омогаю самым разным<br>
+						<b>л</b>юдям <b>д</b>остигать своих<br>
+						<b>ц</b>елей
+					</div>
+				</div>
+				<div class="right">
+					<ul>
+						<li>
+							<span>Максим Саляхов</span>
+							<p>
+								Огромное спасибо тебе, Лилит. За одну встречу ты помогла мне<br>
+								найти ответ на все мои вопросы. Уже за один день я увидел в себе<br>
+								изменения в лучшую сторону. Обязательно посещу твой тренинг<br>
+								"Жизнь в любви".<br>
+								Очень благодарен тебе. Спасибо.
+							</p>
+						</li>
+						<li>
+							<span>Григорий Лирент</span>
+							<p>
+								Огромное спасибо за сегодняшнюю встречу! Это было весьма<br>
+								неожиданно: понять всего-лишь одну маленькую деталь, которая<br>
+								мешала качеству деятельности на протяжении длительного<br>
+								времени. Подобное осознание уже приносит плоды. Еще раз мои<br>
+								благодарности!
+							</p>
+						</li>
+						<li>
+							<span>Иришка Кузьмина</span>
+							<p>
+								Лилит, вы очень помогаете мне поменять мое мышление, да и жизнь<br>
+								в целом. У меня было много тараканов в голове и переживаний, вы<br>
+								вытаскиваете их наружу и показываете, как с ними справиться. Я<br>
+								очень благодарна, что жизнь меня свела с вами:) Спасибо!
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c5">
+		<div class="wrapp">
+			<div class="prem cl">
+				<div class="left">
+					<div class="title">
+						<span>Вручение</span><br>
+						Европейской премии
+					</div>
+					<div class="title2">
+						«Aurora beauty & health» —2014
+					</div>
+					<div class="title3">
+						«Лучший психолог года»
+					</div>
+					<img src="img/prem1.jpg" alt="">
+					<p>
+						Лилит Сарибекян стала победителем Европейской<br>
+						премии  «Aurora beauty & health» в номинации лучший<br>
+						психолог года. Жюри признало высокие достижения<br>
+						психолога в работе с клиентами:  <b>Лилит помогает<br>
+						решить проблему не за десять консультаций, а за одну!</b>
+					</p>
+				</div>
+				<div class="right">
+					<img src="img/prem2.jpg" alt="">
+					<p>
+						Премия Аврора для меня означает факт<br>
+						моей успешной работы как психолога,<br>
+						признание и благодарность от тех людей,<br>
+						которые были на моих консультациях,<br>
+						тренингах и достигли высот, как в личной<br>
+						сфере, так и в развитии бизнеса.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c6">
+		<div class="wrapp">
+			<div class="main_block">
+				<div class="img">
+					<div class="title">
+						дипломы<br><b>и сертификаты</b>
+					</div>
+				</div>
+				<div class="serts">
+					<div class="top">
+						<div class="sert"><a href="img/sert/1.jpg" class="fancybox"></a></div>
+						<div class="sert"><a href="img/sert/2.jpg" class="fancybox"></a></div>
+						<div class="sert"><a href="img/sert/3.jpg" class="fancybox"></a></div>
+					</div>
+					<div class="center">
+						<div class="sert"></div>
+						<div class="img_bl"></div>
+					</div>
+					<div class="bottom">
+						<div class="sert"><a href="img/sert/4.jpg" class="fancybox"></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c4">
+		<div class="wrapp">
+			<div class="block1">
+				<div class="mer">
+					ближайшие<br><b>мероприятия</b>
+				</div>
+				<div class="dates">
+					<ul>
+						<li class="active">
+							<span><b>05—06</b> июля</span>
+							<div class="info">Тренинг <b>«Деньги. Свобода . Любовь.»</b></div>
+							<div class="city">г. Суздаль</div>
+						</li><br>
+						<li>
+							<span><b>11—12</b> июля</span>
+							<div class="info">Тренинг <b>«Сценарий жизни»</b></div>
+							<div class="city">г. Харьков</div>
+						</li><br>
+						<li>
+							<span><b>26—27</b> июля</span>
+							<div class="info">Тренинг <b>«Миссия жизни. Для<br>чего я рожден?»</b></div>
+							<div class="city">г. Москва</div>
+						</li><br>
+						<li>
+							<span><b>09—10</b> августа</span>
+							<div class="info">Тренинг <b>«Сценарий жизни»</b></div>
+							<div class="city">г. Оренбург</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="c7">
+		<div class="wrapp">
+			<div class="footer">
+				<div class="title">Контакты</div>
+				<div class="f_menu cl">
+					<div class="left">
+						<ul>
+							<li><span>Москва,</span><br>ул. Малая Грузинская 29</li>
+							<li>
+								8-909-<b>614-19-19</b>
+								<div class="btn" onclick="popup('callback','Заказать звонок');">Заказать звонок</div>
+							</li>
+							<li onclick="popup('question','Задать вопрос');"><i>Задать вопрос</i></li>
+							<li class="vk"><a href="">Лилит Сарибекян</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<ul>
+							<li>тренинги</li><br>
+							<li>Индивидуальные<br>консультации</li><br>
+							<li>Игра</li><br>
+							<li>Корпоративным клиентам</li><br>
+							<li class="active">Бизнес-тренинг</li><br>
+							<li>Обо мне</li><br>
+						</ul>
+					</div>
+				</div>
+				<div class="des"></div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="prefix" class="prefix" value="<? echo $prefix; ?>">
+	<input type="hidden" name="phone_format" class="phone_format" value="<? echo $phone_format; ?>">
+	<input type="hidden" name="referer" value="<? echo $_SERVER['HTTP_REFERER'] ?>">
+	<input type="hidden" name="ref_url" value="<? echo $_SERVER['QUERY_STRING'] ?>">
+	<input type="hidden" class="formname" name="formname" value="">
+	<input type="hidden" class="sitename" name="sitename" value="<? echo $sitename; ?>">
+	<input type="hidden" class="emailsarr" name="emailsarr" value="<? echo $emailsArr; ?>">
+	
+	<script type="text/javascript" src="js/plugins.js"></script>
+</body>
+</html>
+<!-- created by akotov.ru
